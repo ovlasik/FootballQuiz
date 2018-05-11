@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a281664.footballquiz.MainActivity">
+    tools:context="com.example.a281664.footballquiz.MainActivity"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -23,24 +23,28 @@
         android:text="Question"
         android:textSize="24sp"
         android:layout_marginTop="60dp"/>
+
     <Button
         android:id="@+id/answerBtn1"
         android:layout_width="@dimen/answerBtn_width"
-        android:layout_height="@dimen/answerBtn_height"
-        android:text="Answer1"
-        android:layout_marginTop="80dp"/>
+        android:layout_height="68dp"
+        android:layout_marginTop="80dp"
+        android:text="Answer1" />
+
     <Button
         android:id="@+id/answerBtn2"
         android:layout_width="@dimen/answerBtn_width"
         android:layout_height="@dimen/answerBtn_height"
-        android:text="Answer2"
-        android:layout_marginTop="6dp"/>
+        android:layout_marginTop="6dp"
+        android:text="Answer2" />
+
     <Button
         android:id="@+id/answerBtn3"
         android:layout_width="@dimen/answerBtn_width"
         android:layout_height="@dimen/answerBtn_height"
-        android:text="Answer3"
-        android:layout_marginTop="6dp"/>
+        android:layout_marginTop="6dp"
+        android:text="Answer3" />
+
     <Button
         android:id="@+id/answerBtn4"
         android:layout_width="@dimen/answerBtn_width"
