@@ -1,7 +1,11 @@
 package com.example.a281664.footballquiz;
 
+import android.content.DialogInterface;
+import android.preference.DialogPreference;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -22,11 +26,16 @@ public class MainActivity extends AppCompatActivity {
     private int rightAnswerCount = 0;
     private int quizCount = 1;
 
+    static  final private int QUIZ_COUNT = 5;
+
     ArrayList<ArrayList<String>> quizArray = new ArrayList<>();
 
     String quizData[][] = {
             //{Country, right answer, choice1, choice2, choice3}
-            {"Italy","Rome","London","Paris","Kyiv"}
+            {"Italy","Rome","London","Paris","Kyiv"},
+            {"Spain","Madrid","Riga","Dubai","Lwow"},
+            {"China","Beijing","Jakrta","Manila","Stockholm"},
+            {"Germany","Berlin","Mexico City","Havana","New Dehli"}
     };
 
 
@@ -90,6 +99,47 @@ public class MainActivity extends AppCompatActivity {
         //Remowe this quiz from quizArray
         quizArray.remove(randomNum);
 
+    }
+
+    public void checkAnswer(View view)
+    {
+        //get pushed button
+        Button answerBtn = (Button) findViewById(view.getId());
+        String btnText = answerBtn.getText().toString();
+
+        String alerTitle;
+
+        if(btnText.equals(rightAswer)){
+            //Correct!
+            alerTitle = "Correct!";
+            rightAnswerCount++;
+        }
+        else {
+            //wrong
+            alerTitle = "Wrong...";
+        }
+
+        //Create dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(alerTitle);
+        builder.setMessage("Answer : " + rightAswer);
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i){
+                if(quizCount == QUIZ_COUNT){
+                    //show result
+                }
+                else{
+                    quizCount++;
+                    showNextQuiz();
+                }
+            }
+        });
+        builder.setCancelable(false);
+        builder.show();
+
+
 
     }
+
 }
