@@ -1,6 +1,7 @@
 package com.example.a281664.footballquiz;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.preference.DialogPreference;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
             {"Italy","Rome","London","Paris","Kyiv"},
             {"Spain","Madrid","Riga","Dubai","Lwow"},
             {"China","Beijing","Jakrta","Manila","Stockholm"},
-            {"Germany","Berlin","Mexico City","Havana","New Dehli"}
+            {"Germany","Berlin","Mexico City","Havana","New Dehli"},
+            {"Ukraine","Kyiv","Mexico City","Havana","New Dehli"}
     };
 
 
@@ -128,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i){
                 if(quizCount == QUIZ_COUNT){
                     //show result
+                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    intent.putExtra("RIGHT_ANSWER_COUNT", rightAnswerCount);
+                    startActivity(intent);
                 }
                 else{
                     quizCount++;
