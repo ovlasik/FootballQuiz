@@ -1,6 +1,7 @@
 package com.example.a281664.footballquiz;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,5 +24,10 @@ public class StartActivity extends AppCompatActivity {
     public void startQuiz(View view){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
+    }
+
+    public void quitQuiz(View view){
+        //android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(0);
     }
 }

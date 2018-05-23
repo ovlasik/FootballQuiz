@@ -5,4 +5,7 @@
 
     <dimen name="startBtn_width">320dp</dimen>
     <dimen name="startBtn_height">188dp</dimen>
+
+    <dimen name="quitBtn_width">320dp</dimen>
+    <dimen name="quitBtn_height">188dp</dimen>
 </resources>
