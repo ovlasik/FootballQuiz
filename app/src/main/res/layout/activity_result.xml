@@ -31,10 +31,11 @@
         android:textSize="20sp"
         android:layout_marginTop="60dp"/>
 
-    <Button
-        android:layout_width="140dp"
-        android:layout_height="50dp"
+    <ImageButton
+        android:layout_width="218dp"
+        android:layout_height="108dp"
         android:text="Play Again"
+        android:src="@drawable/play_again_button"
         android:textSize="18sp"
         android:layout_marginTop="80dp"
         android:onClick="returnTop"/>

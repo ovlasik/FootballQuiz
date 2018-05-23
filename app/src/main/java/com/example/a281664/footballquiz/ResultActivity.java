@@ -1,9 +1,11 @@
 package com.example.a281664.footballquiz;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
@@ -22,7 +24,7 @@ public class ResultActivity extends AppCompatActivity {
         int totalScore = settings.getInt("totalScore",0);
         totalScore = totalScore + score;
 
-        resultLabel.setText(score + " / 5");
+        resultLabel.setText(score + " / 15");
         totalScoreLabel.setText("Total Score : " + totalScore);
 
         //update total score
@@ -30,4 +32,11 @@ public class ResultActivity extends AppCompatActivity {
         editor.putInt("totalScore", totalScore);
         editor.commit();
     }
+
+    public void returnTop(View view){
+        Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+        startActivity(intent);
+    }
+
+
 }

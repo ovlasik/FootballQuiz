@@ -2,4 +2,7 @@
 <resources>
     <dimen name="answerBtn_width">300dp</dimen>
     <dimen name="answerBtn_height">60dp</dimen>
+
+    <dimen name="startBtn_width">320dp</dimen>
+    <dimen name="startBtn_height">188dp</dimen>
 </resources>

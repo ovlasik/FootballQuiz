@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a281664.footballquiz.StartActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Football Quiz"
+        android:textSize="30sp"
+        android:layout_marginTop="80dp"/>
+
+    <ImageButton
+        android:id="@+id/startbutton"
+        android:layout_width="@dimen/startBtn_width"
+        android:layout_height="@dimen/startBtn_height"
+        android:src="@drawable/play_button"
+        android:text="Play Quiz"
+        android:layout_marginTop="100dp"
+        android:onClick="startQuiz"/>
+
+
+
+
+
+
+</LinearLayout>

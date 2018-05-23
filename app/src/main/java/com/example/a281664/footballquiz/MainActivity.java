@@ -6,6 +6,7 @@ import android.preference.DialogPreference;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,17 +28,27 @@ public class MainActivity extends AppCompatActivity {
     private int rightAnswerCount = 0;
     private int quizCount = 1;
 
-    static  final private int QUIZ_COUNT = 5;
+    static  final private int QUIZ_COUNT = 15;
 
     ArrayList<ArrayList<String>> quizArray = new ArrayList<>();
 
     String quizData[][] = {
             //{Country, right answer, choice1, choice2, choice3}
-            {"Italy","Rome","London","Paris","Kyiv"},
-            {"Spain","Madrid","Riga","Dubai","Lwow"},
-            {"China","Beijing","Jakrta","Manila","Stockholm"},
-            {"Germany","Berlin","Mexico City","Havana","New Dehli"},
-            {"Ukraine","Kyiv","Mexico City","Havana","New Dehli"}
+            {"Who plays in Real Madrid?","Marcelo","Iago Aspas","Pique","Aguero"},
+            {"Who plays in Barcelona?","Messi","Zidan","Dybala","Buffon"},
+            {"Who plays in Atletico?","Griezmann","Pogba","Ribery","Alaba"},
+            {"Who plays in Valencia?","Zaza","Boateng","Ronalda","Willian"},
+            {"Who plays in Sevilla?","Jesus Navas","Modric","Rakitic","Sergio Ramos"},
+            {"Who plays in Man City?","De Bryune","Neymar","Messi","Benzema"},
+            {"Who plays in Man United?","Pogba","Zinczenko","Lewandowski","Yarmolenko"},
+            {"Who plays in Chelsea?","Morata","Yaya Toure","Salah","Gerrard"},
+            {"Who plays in Liverpool?","Salah","Pepe","Cesc Fabregas","Pedro"},
+            {"Who plays in Tottenham?","Kane","Suarez","Dembele","Ozil"},
+            {"Who plays in Bayern Munich?","Lewandowski","Reus","Gotze","Ronaldo"},
+            {"Who plays in Borussia Dortmund?","Yarmolenko","Ribery","Neuer","Higuain"},
+            {"Who plays in Schalke 04?","Konoplyanka","Rakitic","Sergio Roberto","Ronaldo"},
+            {"Who plays in Bayer 04?","Sven Bender","Dante","Hummels","Savic"},
+            {"Who plays in Wolfsburg?","Blaszczykowski","James","Isco","Sergio Ramos"}
     };
 
 
@@ -52,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
         answerBtn2 =(Button) findViewById(R.id.answerBtn2);
         answerBtn3 =(Button) findViewById(R.id.answerBtn3);
         answerBtn4 =(Button) findViewById(R.id.answerBtn4);
+
+        //Receive quizCategory fraom StartActivity
+        int quizCategory = getIntent().getIntExtra("QUIZ_CATEGORY", 0);
+
+        Log.v("CATEGOTY_TAG", quizCategory + "");
+
+
 
         //Tworze quizArray z quizData
         for(int i =0; i<quizData.length; i++)
@@ -74,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     public void showNextQuiz(){
 
         //Update quizCountLabel
-        countLabel.setText("Q" + quizCount);
+        countLabel.setText("Question" + quizCount);
 
         //Generate random number between 0 and 14 (qiuzArray's size-1)
         Random random = new Random();
