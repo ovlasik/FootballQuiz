@@ -7,35 +7,47 @@
     tools:context="com.example.a281664.footballquiz.StartActivity"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/img2">
 
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "Football Quiz"
-        android:textSize="30sp"
-        android:layout_marginTop="80dp"/>
+        android:layout_marginTop="90dp"
+        android:layout_weight="0.10"
+        android:text="Football Quiz"
+        android:textColor="#e0fb07"
+        android:textSize="50sp" />
 
     <ImageButton
         android:id="@+id/startbutton"
-        android:layout_width="@dimen/startBtn_width"
-        android:layout_height="148dp"
+        android:layout_width="242dp"
+        android:layout_height="109dp"
         android:src="@drawable/play_button"
         android:text="Play Quiz"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:onClick="startQuiz"
-        android:layout_weight="0.17" />
+        android:background="@null"/>
 
     <ImageButton
         android:id="@+id/quitbutton"
-        android:layout_width="335dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="254dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="20dp"
         android:onClick="quitQuiz"
         android:src="@drawable/quit_button"
         android:text="Quit"
-        android:layout_weight="0.12" />
+        android:layout_weight="0.05"
+        android:background="@null"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play_music"
+        android:id="@+id/button"
+        android:src="@drawable/music_button"
+        android:onClick="PlayIT" />
 
 
 </LinearLayout>

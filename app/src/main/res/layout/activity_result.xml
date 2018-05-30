@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     tools:context="com.example.a281664.footballquiz.ResultActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/img2">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Result"
-        android:textSize="20sp"
-        android:layout_marginTop="50dp"/>
+        android:textSize="40sp"
+        android:textColor="#e0fb07"
+        android:layout_marginTop="50dp" />
 
     <TextView
         android:id="@+id/resultLabel"
@@ -21,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="3/5"
         android:textSize="30sp"
+        android:textColor="#e0fb07"
         android:layout_marginTop="60dp"/>
 
     <TextView
@@ -28,7 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Score : 333"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textColor="#e0fb07"
         android:layout_marginTop="60dp"/>
 
     <ImageButton
@@ -38,7 +43,8 @@
         android:src="@drawable/play_again_button"
         android:textSize="18sp"
         android:layout_marginTop="80dp"
-        android:onClick="returnTop"/>
+        android:onClick="returnTop"
+        android:background="@null"/>
 
 
 

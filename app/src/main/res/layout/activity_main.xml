@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.a281664.footballquiz.MainActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/img2">
 
 
     <TextView
@@ -14,15 +15,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Q1"
-        android:textSize="22sp"
+        android:textSize="32sp"
+        android:textColor="#e0fb07"
         android:layout_marginTop="30dp"/>
     <TextView
         android:id="@+id/questionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question"
-        android:textSize="24sp"
-        android:layout_marginTop="60dp"/>
+        android:textColor="#e0fb07"
+        android:textSize="34sp"
+        android:layout_marginTop="50dp"/>
 
     <Button
         android:id="@+id/answerBtn1"
@@ -30,6 +33,7 @@
         android:layout_height="68dp"
         android:text="Answer1"
         android:layout_marginTop="80dp"
+        android:background="@color/colorAccent"
         android:onClick="checkAnswer" />
 
     <Button
@@ -38,6 +42,7 @@
         android:layout_height="@dimen/answerBtn_height"
         android:text="Answer2"
         android:layout_marginTop="6dp"
+        android:background="@color/colorAccent"
         android:onClick="checkAnswer" />
 
     <Button
@@ -46,6 +51,7 @@
         android:layout_height="@dimen/answerBtn_height"
         android:text="Answer3"
         android:layout_marginTop="6dp"
+        android:background="@color/colorAccent"
         android:onClick="checkAnswer" />
 
     <Button
@@ -54,6 +60,7 @@
         android:layout_height="@dimen/answerBtn_height"
         android:text="Answer4"
         android:layout_marginTop="6dp"
+        android:background="@color/colorAccent"
         android:onClick="checkAnswer"/>
 
 </LinearLayout>
