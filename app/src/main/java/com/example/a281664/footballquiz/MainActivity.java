@@ -28,27 +28,22 @@ public class MainActivity extends AppCompatActivity {
     private int rightAnswerCount = 0;
     private int quizCount = 1;
 
-    static  final private int QUIZ_COUNT = 15;
+    static  final private int QUIZ_COUNT = 10;
 
     ArrayList<ArrayList<String>> quizArray = new ArrayList<>();
 
     String quizData[][] = {
             //{Country, right answer, choice1, choice2, choice3}
             {"Who plays in Real Madrid?","Marcelo","Iago Aspas","Pique","Aguero"},
-            {"Who plays in Barcelona?","Messi","Zidan","Dybala","Buffon"},
-            {"Who plays in Atletico?","Griezmann","Pogba","Ribery","Alaba"},
-            {"Who plays in Valencia?","Zaza","Boateng","Ronalda","Willian"},
-            {"Who plays in Sevilla?","Jesus Navas","Modric","Rakitic","Sergio Ramos"},
-            {"Who plays in Man City?","De Bryune","Neymar","Messi","Benzema"},
-            {"Who plays in Man United?","Pogba","Zinczenko","Lewandowski","Yarmolenko"},
-            {"Who plays in Chelsea?","Morata","Yaya Toure","Salah","Gerrard"},
-            {"Who plays in Liverpool?","Salah","Pepe","Cesc Fabregas","Pedro"},
-            {"Who plays in Tottenham?","Kane","Suarez","Dembele","Ozil"},
-            {"Who plays in Bayern Munich?","Lewandowski","Reus","Gotze","Ronaldo"},
-            {"Who plays in Borussia Dortmund?","Yarmolenko","Ribery","Neuer","Higuain"},
-            {"Who plays in Schalke 04?","Konoplyanka","Rakitic","Sergio Roberto","Ronaldo"},
-            {"Who plays in Bayer 04?","Sven Bender","Dante","Hummels","Savic"},
-            {"Who plays in Wolfsburg?","Blaszczykowski","James","Isco","Sergio Ramos"}
+            {"Who won the UEFA Champions League in 2017?","Real Madrid","Barcelona","PSG","Liverpool"},
+            {"Which city has the most clubs competing in its country's top division?","London","Roma","Moscow","Paris"},
+            {"Who finished the 2014-15 Ligue 1 season as top scorer?","Lacazette","Ibrahimovic","Cavani","Ayew"},
+            {"Which club have won the most Serie A titles?","Juventus","Roma","Milan","Inter"},
+            {"Who won the 2015 Africa Cup of Nations?","Ivory Coast","South Africa","Nigeria","Ghana"},
+            {"Who were the last French club to play in a Champions League final?","AS Monaco","PSG","Lyon","Marseille"},
+            {"Which of these players was born in England?","Rooney","Hargreaves","Sterling","Zaha"},
+            {"Who is the only goalkeeper to have won the Ballon d'Or?","Lev Yashin","Casillas","Cech","Buffon"},
+            {"Petr Cech started his career with which Czech club?","Viktoria","Sparta","Chmel","Slavia"}
     };
 
 
@@ -65,10 +60,9 @@ public class MainActivity extends AppCompatActivity {
         answerBtn4 =(Button) findViewById(R.id.answerBtn4);
 
         //Receive quizCategory fraom StartActivity
-        int quizCategory = getIntent().getIntExtra("QUIZ_CATEGORY", 0);
+        //int quizCategory = getIntent().getIntExtra("QUIZ_CATEGORY", 0);
 
-        Log.v("CATEGOTY_TAG", quizCategory + "");
-
+        //Log.v("CATEGOTY_TAG", quizCategory + "");
 
 
         //Tworze quizArray z quizData
@@ -106,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         questionLabel.setText(quiz.get(0));
         rightAswer = quiz.get(1);
 
-        //Remove Country from quiz and Shuffle choices
+        //Remove answer from quiz and Shuffle choices
         quiz.remove(0);
         Collections.shuffle(quiz);
 
